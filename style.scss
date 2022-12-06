@@ -1,0 +1,134 @@
+$color-dark: hsl(36, 100%, 64%);
+$color-normal: hsl(47, 92%, 66%);
+$color-light: hsl(60, 94%, 80%);
+$color-contrast: #3D3D0C;
+
+$font-header: 'Allerta', Helvetica ,sans-serif;
+$font-paragraph: 'Amiko', sans-serif;
+
+@mixin flex-master(
+    $justify: center,
+    $align: center,
+) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+* {
+    color: $color-contrast;
+}
+.wrapper {
+    background-color: $color-light;
+    height: 100%;
+}
+.flex-master {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+nav {
+    background-color: $color-dark;
+    width: 100%;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+}
+.logo-wrapper {
+    @include flex-master();
+    padding: 0 1rem;
+    height: 4rem;
+}
+#logo-text {
+    text-decoration: none;
+    font-family: $font-header;
+    font-size: 1.8rem;
+}
+.nav-wrapper {
+    @include flex-master();
+    justify-content: space-evenly;
+    align-items: flex-end;
+    width: 100%;
+    gap: .5rem;
+}
+.current-nav {
+    border: 2px solid $color-light;
+    border-radius: 4px;
+    padding: 0 4px;
+}
+.nav-item {
+    text-decoration: none;
+    margin: 8px 0;
+    color: $color-contrast;
+    font-family: $font-paragraph;
+}
+hr {
+    width: 100%;
+    margin: 0;
+    padding: 0 2rem;
+}
+h2 {
+    font-family: $font-header;
+    font-size: 1rem;
+}
+
+p {
+    font-family: $font-paragraph;
+}
+.carousel-inner {
+    border-radius: 10px;
+}
+.image-text {
+    background-color: hsla(60, 94%, 72%, .4);
+    border-radius: 8px;
+    padding: 0 10px;
+}
+.content-box {
+    @include flex-master();
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1.5rem 0;
+    border: 4px double $color-contrast;
+    border-radius: 5px;
+    h2 {
+        margin: 0 10px;
+        text-align: center;
+    }
+    div {
+        @include flex-master($justify: space-between);
+        padding: 1rem 0 0 0;
+        width: 30%;
+    }
+}
+footer {
+    @include flex-master();
+    background-color: $color-contrast;
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 10px 10px 0 0;
+    div {
+        justify-content: space-between;
+        padding: 10px;
+        width: 100%;
+        p {
+            color: $color-light;
+            margin: 5px 0 0 0;
+            font-size: .5rem;
+            text-align: right;
+        }
+        nav {
+            @include flex-master($justify: space-evenly);
+            background-color: $color-contrast;
+            width: 100%;
+            padding: 0;
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+.foot-nav {
+    text-decoration: none;
+    color: $color-light;
+}
