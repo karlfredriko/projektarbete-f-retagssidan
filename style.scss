@@ -162,7 +162,9 @@ li {
         margin: 0;
     }
     form {
+        @include flex-master($justify: space-between);
         font-family: $font-paragraph;
+        margin: 0 .5rem;
         button:active {
             background-color: $color-light;
         }
