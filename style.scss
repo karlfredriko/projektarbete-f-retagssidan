@@ -1,7 +1,7 @@
-$color-dark: hsl(36, 100%, 64%);
-$color-normal: hsl(47, 92%, 66%);
-$color-light: hsl(60, 94%, 80%);
-$color-contrast: #3D3D0C;
+$color-dark: #e97c83;
+$color-normal: #EB888F;
+$color-light: #fae0e2;
+$color-contrast: #451114;
 
 $font-header: 'Allerta', Helvetica ,sans-serif;
 $font-paragraph: 'Amiko', sans-serif;
@@ -19,9 +19,40 @@ $font-paragraph: 'Amiko', sans-serif;
 * {
     color: $color-contrast;
 }
+.button {
+    font-family: $font-paragraph;
+    text-decoration: none;
+    background-color: $color-dark;
+    color: $color-contrast;
+    padding: 2px 6px 2px 6px;
+    border-top: 2px solid #CCCCCC;
+    border-right: 2px solid $color-contrast;
+    border-bottom: 2px solid $color-contrast;
+    border-left: 2px solid #CCCCCC;
+    border-radius: 5px;
+}
+.button:active {
+    background-color: $color-light;
+    color: $color-contrast;
+}
+main {
+    h2 {
+    margin: 2rem .5rem 0 .5rem;
+    font-size: 1.6rem;
+    }
+    p {
+    margin: .5rem .5rem 0 .5rem;
+    }
+    article {
+        margin: 2rem 0 0 0;
+    }
+}
 .wrapper {
     background-color: $color-light;
     height: 100%;
+}
+.light-background {
+    background-color: $color-light;
 }
 .flex-master {
     display: flex;
@@ -44,6 +75,9 @@ nav {
     text-decoration: none;
     font-family: $font-header;
     font-size: 1.8rem;
+    img {
+        height: 3rem;
+    }
 }
 .nav-wrapper {
     @include flex-master();
@@ -51,6 +85,9 @@ nav {
     align-items: flex-end;
     width: 100%;
     gap: .5rem;
+    a:active {
+        color: $color-normal;
+    }
 }
 .current-nav {
     border: 2px solid $color-light;
@@ -71,34 +108,82 @@ hr {
 h2 {
     font-family: $font-header;
     font-size: 1rem;
+    text-align: center;
+}
+h3 {
+    font-family: $font-header;
+    font-size: 1.6rem;
+}
+h4 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-style: italic;
 }
 
 p {
+    font-family: $font-paragraph;
+    text-align: center;
+}
+li {
     font-family: $font-paragraph;
 }
 .carousel-inner {
     border-radius: 10px;
 }
 .image-text {
-    background-color: hsla(60, 94%, 72%, .4);
+    background-color: hsla(355, 72%, 93%, .4);
     border-radius: 8px;
-    padding: 0 10px;
+    padding: 10px;
+}
+.three-symbols {
+    @include flex-master($justify: space-between);
+    padding: 1rem 0 0 0;
+    width: 30%;
+    margin: auto;
+}
+.air {
+    margin-bottom: .5rem;
 }
 .content-box {
     @include flex-master();
     flex-direction: column;
     margin: 1rem;
-    padding: 1.5rem 0;
+    padding: 1.5rem 1rem;
     border: 4px double $color-contrast;
     border-radius: 5px;
     h2 {
         margin: 0 10px;
-        text-align: center;
+    }
+    p {
+        margin: 10px;
+        text-align: justify;
+    }
+    .address {
+        margin: 0;
+    }
+    form {
+        font-family: $font-paragraph;
+        button:active {
+            background-color: $color-light;
+        }
+    }
+    .review {
+        width: 90%;
+        flex-direction: column;
+        padding: 0;
+        hr {
+            padding-bottom: 1rem;
+        }
     }
     div {
         @include flex-master($justify: space-between);
         padding: 1rem 0 0 0;
         width: 30%;
+    }
+    .office-cave {
+        max-width: 90%;
+        max-height: 90%;
+        border: 2px solid $color-contrast;
     }
 }
 footer {
@@ -110,18 +195,25 @@ footer {
     div {
         justify-content: space-between;
         padding: 10px;
+        padding-bottom: 5px;
         width: 100%;
         p {
             color: $color-light;
             margin: 5px 0 0 0;
-            font-size: .5rem;
+            font-size: .7rem;
             text-align: right;
+            img {
+                height: 1.4rem;
+            }
         }
         nav {
             @include flex-master($justify: space-evenly);
             background-color: $color-contrast;
             width: 100%;
             padding: 0;
+            a:active {
+                color: $color-normal;
+            }
             p {
                 font-size: 1rem;
             }
@@ -131,4 +223,5 @@ footer {
 .foot-nav {
     text-decoration: none;
     color: $color-light;
+
 }
