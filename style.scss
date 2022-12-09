@@ -9,11 +9,13 @@ $font-paragraph: 'Amiko', sans-serif;
 @mixin flex-master(
     $justify: center,
     $align: center,
+    $direction: row,
 ) {
     display: flex;
     flex-wrap: wrap;
     justify-content: $justify;
     align-items: $align;
+    flex-direction: $direction;
 }
 
 * {
@@ -25,19 +27,24 @@ $font-paragraph: 'Amiko', sans-serif;
     background-color: $color-dark;
     color: $color-contrast;
     padding: 2px 6px 2px 6px;
+    margin-top: .5rem;
     border-top: 2px solid #CCCCCC;
     border-right: 2px solid $color-contrast;
     border-bottom: 2px solid $color-contrast;
     border-left: 2px solid #CCCCCC;
     border-radius: 5px;
+
 }
 .button:active {
     background-color: $color-light;
     color: $color-contrast;
 }
 main {
+    @media (min-width: 576px) {
+        @include flex-master()
+    }
     h2 {
-    margin: 2rem .5rem 0 .5rem;
+    margin: 3rem .5rem 0 .5rem;
     font-size: 1.6rem;
     }
     p {
@@ -70,13 +77,22 @@ nav {
     @include flex-master();
     padding: 0 1rem;
     height: 4rem;
+    @media (max-width: 395px) {
+        padding: 0;
+    }
 }
 #logo-text {
     text-decoration: none;
     font-family: $font-header;
     font-size: 1.8rem;
+    @media (max-width: 385px) {
+        font-size: 1.5rem;
+    }
     img {
         height: 3rem;
+        @media (max-width: 385px) {
+            height: 2.5rem;
+        }
     }
 }
 .nav-wrapper {
@@ -96,9 +112,12 @@ nav {
 }
 .nav-item {
     text-decoration: none;
-    margin: 8px 0;
+    // margin: 8px 0;
     color: $color-contrast;
     font-family: $font-paragraph;
+    @media (max-width:385px) {
+        font-size: .8rem;
+    }
 }
 hr {
     width: 100%;
@@ -141,16 +160,35 @@ li {
     width: 30%;
     margin: auto;
 }
+.card {
+    max-width: 90%;
+    width: 500px;
+}
 .air {
     margin-bottom: .5rem;
 }
+.left {
+    @media (min-width: 576px){
+        width: 100%;
+        margin-right: 1rem;
+    }
+}
+.right {
+    @media (min-width: 576px) {
+        width: 100%;
+        margin-left: 1rem;
+    }
+
+}
 .content-box {
-    @include flex-master();
-    flex-direction: column;
+    @include flex-master($direction: column);
     margin: 1rem;
     padding: 1.5rem 1rem;
     border: 4px double $color-contrast;
     border-radius: 5px;
+    @media (max-width: 400px) {
+        padding: 1.5rem 0;
+    }
     h2 {
         margin: 0 10px;
     }
@@ -162,9 +200,12 @@ li {
         margin: 0;
     }
     form {
-        @include flex-master($justify: space-between);
+        @include flex-master($justify: space-between, $direction: column);
         font-family: $font-paragraph;
         margin: 0 .5rem;
+        div {
+            width: 330px;
+        }
         button:active {
             background-color: $color-light;
         }
@@ -186,6 +227,7 @@ li {
         max-width: 90%;
         max-height: 90%;
         border: 2px solid $color-contrast;
+        width: 480px;
     }
 }
 footer {
@@ -217,13 +259,23 @@ footer {
                 color: $color-normal;
             }
             p {
-                font-size: 1rem;
+                font-size: .8rem;
+            }
+            a {
+                text-decoration: none;
+                color: $color-light;
+                font-family: $font-paragraph;
+                @media (max-width:385px) {
+                    font-size: .8rem;
+                }
+
             }
         }
     }
 }
-.foot-nav {
-    text-decoration: none;
-    color: $color-light;
+// .foot-nav {
+//     text-decoration: none;
+//     color: $color-light;
+//     font-family: $font-paragraph;
 
-}
+// }

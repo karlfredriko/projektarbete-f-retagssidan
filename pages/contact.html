@@ -38,46 +38,64 @@
             </nav>
         </header>
         <main>
-            <h2>Hitta hit!</h2>
-            <div class="content-box">
-                    <img class="office-cave" src="../imgs/office-cave-square-with-logo.png" alt="bild på en grotta med vimps logga.">
-                    <P>Besöksadress:</P>
-                    <p class="address">Grottvägen 1</p>
-                    <p class="address">111 11 Borås</p>
-                    <p class="address">Tel: 070 000 000</p>
-                <div>
-                    <img src="/imgs/gem.svg" alt="">
-                    <img src="/imgs/gem.svg" alt="">
-                    <img src="/imgs/gem.svg" alt="">
+            <div class="left">
+                <h2>Hitta hit!</h2>
+                <div class="content-box">
+                        <img class="office-cave" src="../imgs/office-cave-square-with-logo.png" alt="bild på en grotta med vimps logga.">
+                        <P>Besöksadress:</P>
+                        <p class="address">Grottvägen 1</p>
+                        <p class="address">111 11 Borås</p>
+                        <p class="address">Tel: 070 000 000</p>
+                    <div>
+                        <img src="/imgs/gem.svg" alt="">
+                        <img src="/imgs/gem.svg" alt="">
+                        <img src="/imgs/gem.svg" alt="">
+                    </div>
                 </div>
             </div>
-            <h2 id="contactForm">Kom i kontakt med oss direkt för att beställa en tjänst eller har några frågor!</h2>
-            <div class="content-box">
-                <form>
-                    <label class="air">Namn:</label>
-                    <input class="air" type="text" autocomplete="cc-name"><br>
-                    <label class="air">Telefon:</label>
-                    <input class="air" type="text" autocomplete="mobile"><br>
-                    <label class="air">Email:</label>
-                    <input class="air" type="text" autocomplete="email"><br>
-                    <label class="air">Val av tjänst:</label>
-                    <select class="air" name="service">
-                        <option hidden>Välj en</option>
-                        <option value="dumping">Dumpning</option>
-                        <option value="sacking">Sparken</option>
-                        <option value="theTalk">Blommor och Bin</option>
-                        <option value="others">Övrigt</option>
-                    </select>
-                    <label class="air">Val av prisnivå:</label>
-                    <select class="air" name="pricing">
-                        <option hidden>Välj en</option>
-                        <option value="standard">Standard</option>
-                        <option value="exclusive">Exklusive</option>
-                        <option value="topTier">Top of the Line</option>
-                    </select>
-                    <textarea name="description" cols="30" rows="10" placeholder="Beskriv ditt ärende"></textarea>
-                    <button class="button">Submit</button>
-                </form>
+            <div class="right">
+                <h2 id="contactForm">Kom i kontakt med oss direkt för att beställa en tjänst eller för frågor!</h2>
+                <div class="content-box">
+                    <form>
+                        <div>
+                            <label class="air">Namn:
+                                <input class="air" type="text" autocomplete="cc-name">
+                            </label>
+                            <label class="air">Tel:
+                                <input class="air" type="text" autocomplete="mobile">
+                            </label>
+                            <label class="air">Email:
+                                <input class="air" type="text" autocomplete="email">
+                            </label>
+                            <label class="air">Val av tjänst:
+                                <select class="air" name="service">
+                                    <option hidden>Välj en</option>
+                                    <option value="dumping">Dumpning</option>
+                                    <option value="sacking">Sparken</option>
+                                    <option value="theTalk">Blommor och Bin</option>
+                                    <option value="others">Övrigt</option>
+                                </select>
+                            </label>
+                            <label class="air">Val av prisnivå:
+                                <select class="air" name="pricing">
+                                    <option hidden>Välj en</option>
+                                    <option value="standard">Standard</option>
+                                    <option value="exclusive">Exklusive</option>
+                                    <option value="topTier">Top of the Line</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div>
+                            <textarea name="description" cols="30" rows="10" placeholder="Beskriv ditt ärende"></textarea>
+                            <button class="button">Skicka</button>
+                        </div>
+                    </form>
+                    <div class="three-symbols">
+                        <img src="/imgs/gem.svg" alt="">
+                        <img src="/imgs/gem.svg" alt="">
+                        <img src="/imgs/gem.svg" alt="">
+                    </div>
+                </div>
             </div>
         </main>
         <footer>

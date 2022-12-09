@@ -8,6 +8,7 @@
   background-color: #e97c83;
   color: #451114;
   padding: 2px 6px 2px 6px;
+  margin-top: 0.5rem;
   border-top: 2px solid #CCCCCC;
   border-right: 2px solid #451114;
   border-bottom: 2px solid #451114;
@@ -20,8 +21,17 @@
   color: #451114;
 }
 
+@media (min-width: 576px) {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+}
 main h2 {
-  margin: 2rem 0.5rem 0 0.5rem;
+  margin: 3rem 0.5rem 0 0.5rem;
   font-size: 1.6rem;
 }
 main p {
@@ -59,8 +69,14 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   padding: 0 1rem;
   height: 4rem;
+}
+@media (max-width: 395px) {
+  .logo-wrapper {
+    padding: 0;
+  }
 }
 
 #logo-text {
@@ -68,8 +84,18 @@ nav {
   font-family: "Allerta", Helvetica, sans-serif;
   font-size: 1.8rem;
 }
+@media (max-width: 385px) {
+  #logo-text {
+    font-size: 1.5rem;
+  }
+}
 #logo-text img {
   height: 3rem;
+}
+@media (max-width: 385px) {
+  #logo-text img {
+    height: 2.5rem;
+  }
 }
 
 .nav-wrapper {
@@ -77,6 +103,7 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-end;
   width: 100%;
@@ -94,9 +121,13 @@ nav {
 
 .nav-item {
   text-decoration: none;
-  margin: 8px 0;
   color: #451114;
   font-family: "Amiko", sans-serif;
+}
+@media (max-width: 385px) {
+  .nav-item {
+    font-size: 0.8rem;
+  }
 }
 
 hr {
@@ -146,13 +177,33 @@ li {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
   padding: 1rem 0 0 0;
   width: 30%;
   margin: auto;
 }
 
+.card {
+  max-width: 90%;
+  width: 500px;
+}
+
 .air {
   margin-bottom: 0.5rem;
+}
+
+@media (min-width: 576px) {
+  .left {
+    width: 100%;
+    margin-right: 1rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .right {
+    width: 100%;
+    margin-left: 1rem;
+  }
 }
 
 .content-box {
@@ -165,6 +216,11 @@ li {
   padding: 1.5rem 1rem;
   border: 4px double #451114;
   border-radius: 5px;
+}
+@media (max-width: 400px) {
+  .content-box {
+    padding: 1.5rem 0;
+  }
 }
 .content-box h2 {
   margin: 0 10px;
@@ -181,8 +237,12 @@ li {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
   font-family: "Amiko", sans-serif;
   margin: 0 0.5rem;
+}
+.content-box form div {
+  width: 330px;
 }
 .content-box form button:active {
   background-color: #fae0e2;
@@ -200,6 +260,7 @@ li {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
   padding: 1rem 0 0 0;
   width: 30%;
 }
@@ -207,6 +268,7 @@ li {
   max-width: 90%;
   max-height: 90%;
   border: 2px solid #451114;
+  width: 480px;
 }
 
 footer {
@@ -214,6 +276,7 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   background-color: #451114;
   width: 100%;
   margin-top: 1rem;
@@ -239,6 +302,7 @@ footer div nav {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
+  flex-direction: row;
   background-color: #451114;
   width: 100%;
   padding: 0;
@@ -247,10 +311,15 @@ footer div nav a:active {
   color: #EB888F;
 }
 footer div nav p {
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
-
-.foot-nav {
+footer div nav a {
   text-decoration: none;
   color: #fae0e2;
+  font-family: "Amiko", sans-serif;
+}
+@media (max-width: 385px) {
+  footer div nav a {
+    font-size: 0.8rem;
+  }
 }/*# sourceMappingURL=style.css.map */
