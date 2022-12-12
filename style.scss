@@ -33,16 +33,20 @@ $font-paragraph: 'Amiko', sans-serif;
     border-bottom: 2px solid $color-contrast;
     border-left: 2px solid #CCCCCC;
     border-radius: 5px;
-
 }
 .button:active {
     background-color: $color-light;
     color: $color-contrast;
 }
+.nav-item:hover {
+    background-color: $color-light;
+    border-radius: 5px;
+    color: $color-contrast;
+}
+#logo-text:hover {
+    background-color: $color-dark;
+}
 main {
-    @media (min-width: 576px) {
-        @include flex-master()
-    }
     h2 {
     margin: 3rem .5rem 0 .5rem;
     font-size: 1.6rem;
@@ -106,13 +110,13 @@ nav {
     }
 }
 .current-nav {
-    border: 2px solid $color-light;
-    border-radius: 4px;
+    background-color: $color-light;
+    border-radius: 5px;
+    color: $color-contrast;
     padding: 0 4px;
 }
 .nav-item {
     text-decoration: none;
-    // margin: 8px 0;
     color: $color-contrast;
     font-family: $font-paragraph;
     @media (max-width:385px) {
@@ -163,22 +167,21 @@ li {
 .card {
     max-width: 90%;
     width: 500px;
+    height: 710px;
 }
+.space-me {
+    @include flex-master($justify: center, $align: center);
+    height: 70%;
+}   
 .air {
     margin-bottom: .5rem;
 }
-.left {
-    @media (min-width: 576px){
-        width: 100%;
-        margin-right: 1rem;
-    }
+.extra-air {
+    margin-bottom: 2rem;
 }
-.right {
-    @media (min-width: 576px) {
-        width: 100%;
-        margin-left: 1rem;
-    }
-
+.sticky {
+    position: sticky;
+    top: 1rem;
 }
 .content-box {
     @include flex-master($direction: column);
@@ -186,9 +189,6 @@ li {
     padding: 1.5rem 1rem;
     border: 4px double $color-contrast;
     border-radius: 5px;
-    @media (max-width: 400px) {
-        padding: 1.5rem 0;
-    }
     h2 {
         margin: 0 10px;
     }
@@ -218,16 +218,25 @@ li {
             padding-bottom: 1rem;
         }
     }
-    div {
-        @include flex-master($justify: space-between);
-        padding: 1rem 0 0 0;
-        width: 30%;
-    }
     .office-cave {
         max-width: 90%;
         max-height: 90%;
         border: 2px solid $color-contrast;
         width: 480px;
+        @media (min-width:992px) {
+            margin-bottom: 3rem;
+        }
+        @media (min-width:1200px) {
+            margin-bottom: 0;
+        }
+    }
+}
+.extra-space {
+    @media (min-width:1200px) {
+        margin-top: 1rem;
+    }
+    @media (min-width:1400px) {
+        margin-top: 2.5rem;
     }
 }
 footer {
@@ -258,6 +267,11 @@ footer {
             a:active {
                 color: $color-normal;
             }
+            a:hover {
+                color: $color-light;
+                background-color: $color-normal;
+                border-radius: 5px;
+            }
             p {
                 font-size: .8rem;
             }
@@ -273,9 +287,3 @@ footer {
         }
     }
 }
-// .foot-nav {
-//     text-decoration: none;
-//     color: $color-light;
-//     font-family: $font-paragraph;
-
-// }
