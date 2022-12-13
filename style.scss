@@ -57,6 +57,14 @@ main {
     article {
         margin: 2rem 0 0 0;
     }
+    section {
+        a {
+            color: $color-contrast;
+        }
+        a:hover {
+            color: $color-contrast;
+        }
+    }
 }
 .wrapper {
     background-color: $color-light;

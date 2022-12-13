@@ -41,6 +41,12 @@ main p {
 main article {
   margin: 2rem 0 0 0;
 }
+main section a {
+  color: #451114;
+}
+main section a:hover {
+  color: #451114;
+}
 
 .wrapper {
   background-color: #fae0e2;
